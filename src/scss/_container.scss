@@ -1,0 +1,155 @@
+.container {
+    padding: 8.0625rem 11rem 6.25rem 10.375rem;
+    @include breakpoint-down(large) {
+        padding: 5.4rem 1.6rem 6.6rem 1.6rem;
+    }
+    
+    &--top {
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint-down(large) {
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            font-size: 3rem;
+            line-height: 0.95;
+            color: $veryDarkMagenta;
+            margin: 0;
+            @include breakpoint-down(large) {
+                font-size: 2rem;
+                text-align: center;
+            }
+        }
+        p {
+            margin: 0.875rem 0 0 0 ;
+            font-size: 1rem;
+            color: $darkGrayishMagenta;
+            line-height: 1.5;
+            @include breakpoint-down(large) {
+                font-size: 0.86rem;
+                text-align: center;
+            }
+        }
+    }
+
+    &--text {
+        width: 45%;
+        @include breakpoint-down (large) {
+            width: 100%;
+        }
+    }
+    &--notes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        @include breakpoint-down (large) {
+         margin-top: 3rem;
+        }
+        .card-rate {
+            width: 85%;
+            padding: 1rem 2rem;
+            background-color: $lightGrayishMagenta;
+            display: flex;
+            border-radius: 7px;
+            @include breakpoint-down (large) {
+             flex-direction: column;
+             align-items: center;
+             width: 100%;
+             &:not(:last-child) {
+                 margin-bottom: 1rem;
+             }
+            }
+            
+            &:first-child {
+                transform: translateX(-6.4rem);
+                @include breakpoint-down (large) {
+                    transform: translateX(0);
+                }
+            }
+            &:nth-child(2) {
+                transform: translateX(-3.2rem);
+                @include breakpoint-down (large) {
+                    transform: translateX(0);
+                }
+            }
+            .note--review {
+                color: $veryDarkMagenta;
+                font-weight: 700;
+                font-size: 0.7rem;
+                margin: 0;
+                padding-top: 3px;
+                @include breakpoint-down (large) {
+                    padding: 0;
+                    margin-top: 0.4rem;
+                }
+            }
+        }
+        .stars {
+            margin-right: 2rem;
+            img:not(:last-child) {
+                margin-right: 0.5rem;
+            }
+            @include breakpoint-down (large) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &--bottom {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        color: $white;
+        @include breakpoint-down (large) {
+            flex-direction: column;
+            margin-top: 3.3rem;
+        }
+    }
+
+    .card {
+        padding: 2.66rem 2.33rem 2.66rem 2.13rem;
+        flex: 0 1 25%;
+        background-color: $veryDarkMagenta;
+        border-radius: 7px;
+        &--top {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        &:nth-child(2) {
+            transform: translateY(1rem);
+        }
+        &:last-child {
+            transform: translateY(2rem);
+        }
+    }
+
+    .client {
+        &--photo {
+            border-radius: 50%;
+            height: 2.66rem;
+            width: 2.66rem;
+            margin-right: 1.5rem;
+        }
+        &--info {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.86rem;
+        }
+        &--name {
+            font-weight: 700;
+        }
+        &--status {
+            margin-top: 0.5rem;
+            color: $softPink;
+            font-weight: 400;
+        }
+        &--comments {
+            font-size: 0.73rem;
+            line-height: 1.5;
+            color: $lightGrayishMagenta;
+        }
+    }
+}
